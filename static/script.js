@@ -38,6 +38,7 @@ document.getElementById("textual")
 
 var btn = document.querySelector("button");
 var i = 0;
+window.onload = function(){
 btn.onclick = function() {
         console.log(document.getElementById('textual').value);
         var skoring = $("#textual").val();
@@ -58,5 +59,5 @@ btn.onclick = function() {
 						i = 0;
 						btn.classList.remove('percent-100');
 				}
-		}, 35);
-}
+		}, 30);
+}}
