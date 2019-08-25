@@ -15,7 +15,7 @@ def predict(text):
 
     text = np.array(text).reshape(1, )
 
-    with open('tokenizer.pickle', 'rb') as handle:
+    with open('resources/tokenizer.pickle', 'rb') as handle:
         tokenizer = pickle.load(handle)
     list_tokenized_test = tokenizer.texts_to_sequences(text)
     x_test = pad_sequences(list_tokenized_test, maxlen=max_len)  # Restrict each row in df to max_len = 100 words
