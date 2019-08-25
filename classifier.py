@@ -1,36 +1,22 @@
 import os
+import pickle
 import numpy as np
-import pandas as pd
 from keras import backend as K
 from keras.models import model_from_json
-from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 
 
-list_sentences_train = np.array([1])
 max_features, max_len = 20000, 100
-tokenizer = Tokenizer(num_words=max_features)  # 20000 i.e. num_words to use
-
-
-def warm_up():
-    data_dir = 'resources/'
-    global list_sentences_train
-    global tokenizer
-    train = pd.read_csv(os.path.join(data_dir, 'train.zip'))
-    list_sentences_train = train['comment_text'].fillna('_na_').values
 
 
 def predict(text):
     K.clear_session()
     data_dir = 'resources/'
 
-    # train = pd.read_csv(os.path.join(data_dir, 'train.csv'))
-    # list_sentences_train = train['comment_text'].fillna('_na_').values
-
     text = np.array(text).reshape(1, )
 
-    # tokenizer = Tokenizer(num_words=max_features)  # 20000 i.e. num_words to use
-    tokenizer.fit_on_texts(list(list_sentences_train))
+    with open('tokenizer.pickle', 'rb') as handle:
+        tokenizer = pickle.load(handle)
     list_tokenized_test = tokenizer.texts_to_sequences(text)
     x_test = pad_sequences(list_tokenized_test, maxlen=max_len)  # Restrict each row in df to max_len = 100 words
 
