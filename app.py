@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from classifier import predict, warm_up
+from classifier import predict
 
 
 app = Flask(__name__)
@@ -7,7 +7,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    warm_up()
     return render_template('index.html')
 
 
