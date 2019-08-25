@@ -58,5 +58,5 @@ btn.onclick = function() {
 						i = 0;
 						btn.classList.remove('percent-100');
 				}
-		}, 228);
+		}, 110);
 }
