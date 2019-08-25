@@ -16,7 +16,7 @@ def warm_up():
     data_dir = 'resources/'
     global list_sentences_train
     global tokenizer
-    train = pd.read_csv(os.path.join(data_dir, 'train.csv'))
+    train = pd.read_csv(os.path.join(data_dir, 'train.zip'))
     list_sentences_train = train['comment_text'].fillna('_na_').values
 
 
