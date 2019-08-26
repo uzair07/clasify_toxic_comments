@@ -240,22 +240,24 @@ label {
 }
 
 button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: #1e3459;
-  border: none;
-  line-height: 60px;
-  width: 200px;
-  border-radius: 10px;
-  color: #fff;
-  outline: none;
-  letter-spacing: 1px;
+    background-color: #1e3459;
+    border: none;
+    line-height: 60px;
+    width: 200px;
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+    letter-spacing: 5px;
     font-size: 20px;
-    box-shadow: 0 18px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  transition: all 0.5s;
+    box-shadow: 0 18px 25px rgba(30, 52, 89, 0.5);
+    transition: all 0.5s;
+    text-transform: uppercase;
+    font-family: 'Roboto', monospace;
 }
 
 .hoverable:hover {
