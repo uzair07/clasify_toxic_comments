@@ -284,6 +284,7 @@ button:after {
 button.loading {
   width: 60px;
   border-radius: 50%;
+  letter-spacing: 2px;
 }
 button.loading:after {
   opacity: 1;
