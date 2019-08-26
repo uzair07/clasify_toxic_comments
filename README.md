@@ -59,7 +59,7 @@ To run the app locally on your machine, follow these steps in your terminal:
 * `cd clasify_toxic_comments`
 * Create a python virtual environment. Follow [this](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
 * `pip install -r requirements.txt`
-* python app.py 
+* `python app.py`
 <br><br>
 That's it! Your instance should be running at https://127.0.0.1:5000
 
