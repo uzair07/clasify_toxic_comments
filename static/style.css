@@ -1,5 +1,5 @@
 @charset "UTF-8";
-html, body { height: 100%; padding: 0; margin: 0; }
+html, body { background-color: #49a7c7; height: 100%; padding: 0; margin: 0; }
 #div1 {
     background: #4d648d ;
     width: 100%;
